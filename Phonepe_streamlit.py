@@ -62,6 +62,28 @@ if selected =='Map':
                             hover_name='State')
         fig.update_geos(fitbounds="locations", visible=False)
         st.plotly_chart(fig)
+      
+# Bar Chart - Top payment type
+        st.markdown("## :violet[Top Payment Type]")
+        col1,col2= st.columns(2)
+        with col1:
+            pay_year = st.selectbox('', options=[2018, 2019, 2020, 2021, 2022, 2023, 2024], placeholder='Year',
+                                label_visibility='collapsed', key='pay_year')
+        with col2:
+            pay_quarter = st.selectbox('', options=[1, 2, 3, 4], placeholder='Quarter', label_visibility='collapsed',key='pay_quarter')
+
+        payment_type=f'''select Transaction_type, sum(Transaction_count) as Total_Transactions, sum(Transaction_amount) as Total_amount from phonepe.aggregate_transaction 
+        where Year= {pay_year} and Quarter = {pay_quarter} group by Transaction_type order by Transaction_type;'''
+        top_payment= pd.read_sql_query(payment_type, my_connection)
+        fig = px.bar(top_payment,
+                     title='Transaction Types vs Total_Transactions',
+                     x="Transaction_type",
+                     y="Total_Transactions",
+                     orientation='v',
+                     color='Total_amount',
+                     color_continuous_scale=px.colors.sequential.Agsunset)
+        st.plotly_chart(fig,use_container_width=False)
+      
 # Bar chart-Total transactions - State wise
         st.markdown('### :violet[Select options to explore State-wise trends]')
         col1,col2,col3 =st.columns(3)
