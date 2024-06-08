@@ -1,19 +1,6 @@
 # PhonePe-Pulse-Data-Visualization-and-Exploration
 
-Project Overview
-Project Title
-PhonePe Pulse Data Visualization and Exploration: A User-Friendly Tool Using Streamlit and Plotly
-
-Technologies
-GitHub Cloning
-Python
-Pandas
-MySQL
-mysql-connector-python
-Streamlit
-Plotly
-Domain
-Fintech
+Domain: Fintech
 
 Approach
 1. Data Extraction:
@@ -34,7 +21,16 @@ Connecting back to the MySQL database with the "mysql-connector-python" library,
 6. Deployment:
 Prior to public deployment, the solution undergoes rigorous testing to ensure security, efficiency, and user-friendliness. Thorough testing protocols are implemented to identify and rectify any potential issues. Once validated, the dashboard is deployed for public access, offering a reliable tool for users to explore and gain insights from the PhonePe Pulse data.
 
-Dataset
-Data Link: PhonePe Pulse GitHub API
-Inspired From: PhonePe Pulse
+# Dataset
+- Data Link: [PhonePe Pulse GitHub API](https://api.github.com/repos/PhonePe/pulse)
+- Inspired From: [PhonePe Pulse](https://www.phonepe.com/pulse)
+
 This project aims to provide a comprehensive and user-friendly solution for extracting, transforming, and visualizing data from the PhonePe Pulse GitHub repository, offering valuable insights for analysis and decision-making.
+# Technologies  covered:
+- GitHub Cloning
+- Python
+- Pandas
+- MySQL
+- mysql-connector-python
+- Streamlit
+- Plotly
