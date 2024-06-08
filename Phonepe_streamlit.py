@@ -12,7 +12,7 @@ import plotly.graph_objects as go
 #Streamlit Page Creation
 st.set_page_config(page_title='Phonepe Pulse Data Visualization and Exploration',
                 layout='wide',initial_sidebar_state='expanded')
-st.title(':violet[&emsp;&emsp;&emsp;**Phonepe Pulse Data Visualization and Exploration**]')
+st.title(':violet[&emsp;&emsp;&emsp;:bar_chart:**Phonepe Pulse Data Visualization and Exploration**	:chart_with_upwards_trend:]')
 st.subheader(':blue[Domain :] Fintech')
 with st.sidebar:
     st.title(':blue[Overview of the Project]')
